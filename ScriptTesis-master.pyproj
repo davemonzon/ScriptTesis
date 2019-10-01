@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6bfa2608-8788-47e0-96da-dd99f10d65b9}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>ScriptTesis-master\ProcesoPrincipal.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ScriptTesis-master\Helpers\ParseoHelper.py" />
+    <Compile Include="ScriptTesis-master\ProcesoPrincipal.py" />
+    <Compile Include="ScriptTesis-master\Reglas\WCAGReglas.py" />
+    <Compile Include="ScriptTesis-master\ResultadoCriterio.py" />
+    <Compile Include="ScriptTesis-master\Verificacion\VerificacionCriterio01.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ScriptTesis-master" />
+    <Folder Include="ScriptTesis-master\Helpers" />
+    <Folder Include="ScriptTesis-master\Reglas" />
+    <Folder Include="ScriptTesis-master\Verificacion" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
