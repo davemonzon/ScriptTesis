@@ -12,7 +12,7 @@ respuesta = requests.get(url)
 contenido = BeautifulSoup(respuesta.text, "html.parser")
 
 
-# Criterio 1- Controlo textos alternativos para elementos que no sean de tipo texto
+# Criterio 1.1- Controlo textos alternativos para elementos que no sean de tipo texto
 
 for regla in WCAGReglas.dictWCAG2A_1:
     #Parsea elementos
