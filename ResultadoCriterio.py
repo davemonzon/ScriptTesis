@@ -3,7 +3,4 @@ class ResultadoCriterio(object):
     def __init__(self, idCriterio, descripcion, resultados):
         self.idCriterio = idCriterio
         self.Descripcion = descripcion
-        self.resultados = resultados
-
-
- 
+        self.elementos = resultados
